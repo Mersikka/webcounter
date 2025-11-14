@@ -1,2 +1,7 @@
 __pychache__
 src/__pycache__
+*.log
+*.png
+log.html
+output.xml
+report.html
