@@ -5,11 +5,11 @@ Suite Setup  Open And Configure Browser
 Suite Teardown  Close Browser
 
 *** Test Cases ***
-When counter has a nonzero value and it is reset the value becomes zero
+Counter should be set to the value specified, even when it is initially non-zero
    Go To  ${HOME_URL}
-   Title Should be  Laskuri
    Click Button  Nollaa
    Click Button  Paina
    Page Should Contain  nappia painettu 1 kertaa
-   Click Button  Nollaa
-   Page Should Contain  nappia painettu 0 kertaa
+   Input Text  num  10
+   Click Button  Aseta
+   Page Should Contain  nappia painettu 10 kertaa
